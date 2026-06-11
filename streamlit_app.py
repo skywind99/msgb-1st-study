@@ -13,7 +13,7 @@ try:
     csv_url = csv_url.split("/edit")[0] + "/export?format=csv"
     
     # 구글 시트 데이터 불러오기 (캐싱 처리로 속도 향상)
-    @st.cache_data
+
     def load_data(url):
         # 헤더가 없거나 다를 수 있으므로 기본 로드 후 가공
         df = pd.read_csv(url, header=None)
